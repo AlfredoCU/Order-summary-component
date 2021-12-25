@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+    --p-pale-blue: hsl(225, 100%, 94%);
+    --p-bright-blue: hsl(245, 75%, 52%);
+    --s-pale-blue: hsl(225, 100%, 98%);
+    --s-desaturated-blue: hsl(224, 23%, 55%);
+    --s-dark-blue: hsl(223, 47%, 23%);
+    --links: hsl(228, 45%, 44%);
+    --shadow-car: hsl(222, 70%, 84%);
+    --shadow-button: hsl(246, 63%, 84%);
+}
+
+body {
+    width: 100vw;
+    display: flex;
+    font-size: 1rem;
+    padding: 5rem 7%;
+    min-height: 100vh;
+    position: relative;
+    align-items: center;
+    box-sizing: border-box;
+    justify-content: center;
+    font-family: 'Red Hat Display', sans-serif;
+
+    background: url("/images/pattern-background-mobile.svg") top no-repeat;
+    background-color: var(--p-pale-blue);
+    background-size: 100%;
+}
+
+.card {
+    width: 100%;
+    min-width: 100%;
+    max-width: 400px;
+    border-radius: 1rem;
+    background-color: white;
+    box-shadow: 0px 20px 35px 0px var(--shadow-car);
+}
+
+.card__header img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.card__body {
+    padding: 0 1.5rem;
+}
+
+.card__body h1 {
+    font-weight: 900;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 2rem 0 1rem;
+    color: var(--s-dark-blue);
+}
+
+.card__body > p {
+    line-height: 27px;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--s-desaturated-blue);
+}
+
+.plan {
+    gap: 1rem;
+    display: flex;
+    padding: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    justify-content: space-between;
+    background-color: var(--s-pale-blue);
+}
+
+.plan a {
+    font-weight: 700;
+    font-size: 0.875rem;
+    transition: opacity 0.5s;
+    color: var(--p-bright-blue);
+}
+
+.plan a:hover {
+    opacity: 0.5;
+    text-decoration: none;
+}
+
+.plan__card {
+    gap: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.plan__info p {
+    margin: 0;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+    color: var(--s-dark-blue);
+}
+
+.plan__info em {
+    font-style: normal;
+    color: var(--s-desaturated-blue);
+}
+
+.card__footer {
+    gap: 2rem;
+    display: flex;
+    padding: 2rem 1.5rem;
+    flex-direction: column;
+}
+
+.button-primary {
+    border: none;
+    padding: 1rem;
+    color: white;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 0.875rem;
+    border-radius: 0.5rem;
+    transition: opacity 0.5s;
+    background-color: var(--p-bright-blue);
+    box-shadow: 0px 10px 30px 0px var(--shadow-button);
+}
+
+.button-primary:hover {
+    opacity: 0.7;
+}
+
+.button-link {
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 0.875rem;
+    transition: color 0.5s;
+    background-color: transparent;
+    color: var(--s-desaturated-blue);
+}
+
+.button-link:hover {
+    color: var(--s-dark-blue);
+}
+
+.attribution { 
+    bottom: 0;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    font-size: 0.688rem; 
+}
+
+.attribution a {
+    font-weight: 700;
+    color: var(--links); 
+    text-decoration: none;
+}
+
+.attribution a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 48em) {
+    body {
+        background: url("../images/pattern-background-desktop.svg") top  no-repeat;
+        background-color: var(--p-pale-blue);
+        background-size: 100%;
+    }
+
+    .card__body {
+        padding: 0 2.5rem;
+    }
+
+    .card__footer {
+        padding: 2rem 2.5rem 2.5rem;
+    }
+}
